@@ -5,8 +5,7 @@ const admin = require('firebase-admin');
 const serviceWorker = require('./service-account-file.json')
 
 admin.initializeApp({
-    // credential: admin.credential.cert(serviceWorker),
-    credential: admin.credential.applicationDefault(),
+    credential: admin.credential.cert(serviceWorker),
     databaseURL: "https://zerobug-f79e9.firebaseio.com"
 })
 
