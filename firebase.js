@@ -21,7 +21,12 @@ let getAllUsers = function (request, response) {
                 console.log(userRecord.displayName.toLowerCase());
                 console.log(userName.toLowerCase());
                 if (userRecord.displayName.toLowerCase().includes(userName.toLowerCase())) {
-                    searchedUsers.push(userRecord);
+                    let userDetails = {
+                        displayName: userRecord.displayName,
+                        photoURL: userRecord.photoURL,
+                        uid: userRecord.uid
+                    }
+                    searchedUsers.push(userDetails);
                     console.log(searchedUsers);
                 }
             })
