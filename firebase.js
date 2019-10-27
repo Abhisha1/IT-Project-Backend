@@ -1,6 +1,5 @@
 const admin = require('firebase-admin');
 const dotenv = require('dotenv').config();
-console.log(process.env.FIREBASE_PRIVATE_KEY)
 // configures the admin SDK
 
 
