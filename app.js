@@ -13,7 +13,6 @@ app.use(function(req, res, next) {
     next();
 });
 
-
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.post('/api/getAllUsers', firebase.getAllUsers)
